@@ -1,0 +1,22 @@
+# Data base connectivity
+spring:
+ data:
+  mongodb:
+   uri: ${MONGO_URI}
+   database: ${MONGO_DB_NAME}
+   auto-index-creation: true
+   
+# Server Url
+service:
+ agri-bid-server:
+  url: https://agribid-server-1.onrender.com/agri-bid/	   
+ 
+# Server Error handling   
+server:
+ error:
+  include-message: always  
+  include-binding-errors: always
+  include-stacktrace: on_param
+  
+   
+   
