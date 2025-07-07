@@ -4,9 +4,4 @@ spring:
   mongodb:
    uri: ${MONGO_URI}
    database: ${MONGO_DB_NAME}
-   auto-index-creation: true
-   
-# Server Url
-service:
- agri-bid-server:
-  url: http://localhost:8083/quickconvo/	      
+   auto-index-creation: true	      
