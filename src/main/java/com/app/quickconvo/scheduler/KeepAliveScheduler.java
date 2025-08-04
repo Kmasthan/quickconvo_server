@@ -17,6 +17,6 @@ public class KeepAliveScheduler {
 
     @Scheduled(cron = "0 0/14 * * * ?")
     public String keepAlive() {
-        return restTemplate.getForObject("https://quickconvo-server.onrender.com/chat/welcome", String.class);
+        return restTemplate.getForObject("https://quickconvo-server.onrender.com/quickconvo/welcome", String.class);
     }
 }
