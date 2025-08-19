@@ -9,14 +9,14 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 @EnableScheduling
-@Profile("prod")
-public class KeepAliveScheduler {
+@Profile("dev")
+public class KeepAliveSchedulerDev {
 
     @Autowired
     private RestTemplate restTemplate;
 
-    @Scheduled(cron = "0 0/14 * * * ?")
+//    @Scheduled(cron = "0/1 * * * * ?")
     public String keepAlive() {
-        return restTemplate.getForObject("https://quickconvo-server.onrender.com/quickconvo/welcome", String.class);
+        return restTemplate.getForObject("http://localhost:8083/quickconvo/welcome", String.class);
     }
 }
